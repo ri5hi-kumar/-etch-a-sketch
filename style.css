@@ -1,0 +1,13 @@
+.grid{
+    display: grid;
+    height: 575px;
+    width: 575px;
+    grid-template-columns: repeat(16, 2fr);
+    grid-template-rows: repeat(16, 2fr);
+    border: 3px solid black;
+}
+
+.cell{
+    background-color: white;
+    border: 1px solid black;
+}
