@@ -1,9 +1,9 @@
 .grid{
     display: grid;
-    height: 575px;
-    width: 575px;
-    grid-template-columns: repeat(16, 2fr);
-    grid-template-rows: repeat(16, 2fr);
+    height: 500px;
+    width: 500px;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
     border: 1px solid black;
 }
 
