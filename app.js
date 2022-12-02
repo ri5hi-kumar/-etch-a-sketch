@@ -4,6 +4,8 @@ const DEFAULT_MODE = 'black'
 let currentMode = DEFAULT_MODE;
 let currentSize = DEFAULT_SIZE;
 
+let draw = false;
+
 const grid = document.querySelector('.grid');
 const slider = document.querySelector('#slider');
 const clear = document.querySelector('#clear');
@@ -12,6 +14,7 @@ const rgb = document.querySelector('#rgb');
 const display = document.querySelector('.display');
 
 function changeColor(e) {
+    if(!draw) return;
     if(currentMode === 'black'){
         e.target.style.backgroundColor = 'black';
     }
@@ -27,10 +30,19 @@ const createGrid = (size) => {
     for(let i = 1; i <= size * size; i++){
         const box = document.createElement('div');
         box.classList.add('cell');
+        box.addEventListener('mouseover', changeColor);
         box.addEventListener('mousedown', changeColor);
         grid.append(box);
     }
 }
+
+window.addEventListener('mousedown', function(){
+    draw = true;
+})
+
+window.addEventListener('mouseup', function(){
+    draw = false;
+})
 
 slider.addEventListener('change', function(e){
     grid.innerHTML = '';
