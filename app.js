@@ -14,7 +14,7 @@ const rgb = document.querySelector('#rgb');
 const display = document.querySelector('.display');
 
 function changeColor(e) {
-    if(!draw) return;
+    if(e.type === 'mouseover' && !draw) return;
     if(currentMode === 'black'){
         e.target.style.backgroundColor = 'black';
     }
