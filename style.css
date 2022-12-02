@@ -8,6 +8,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color:#ededed;
 }
 
 #title{
@@ -37,6 +38,18 @@ button{
     padding: 10px 20px;
     border: 1px solid darkgray;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #3d3232;
+    color: #fefefe;
+}
+
+button:active{
+    transform: translateY(2px);
 }
 
 .slider-change{
