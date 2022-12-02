@@ -9,6 +9,7 @@ const slider = document.querySelector('#slider');
 const clear = document.querySelector('#clear');
 const black = document.querySelector('#black');
 const rgb = document.querySelector('#rgb');
+const display = document.querySelector('.display');
 
 function changeColor(e) {
     if(currentMode === 'black'){
@@ -22,6 +23,7 @@ function changeColor(e) {
 const createGrid = (size) => {
     grid.style.gridTemplateColumns = `repeat(${size}, 2fr)`;
     grid.style.gridTemplateRows = `repeat(${size}, 2fr)`;
+    display.innerText = `${size} X ${size}`;
     for(let i = 1; i <= size * size; i++){
         const box = document.createElement('div');
         box.classList.add('cell');

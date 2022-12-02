@@ -10,16 +10,19 @@
 </head>
 <body>
     <h1 id="title">Etch a Sketch</h1>
-    <div class="buttons">
-        <button id="clear">Clear</button>
-        <button id="black">Black</button>
-        <button id="rgb">RGB</button>
+    <div class="main-content">
+        <div class="inputs">
+            <button id="black">Black</button>
+            <button id="rgb">RGB</button>
+            <button id="clear">Clear</button>
 
-        <div class="slider-change">
-            <input type="range" autocomplete="off" min="8" max="64" id="slider" value="16">
+            <div class="slider-change">
+                <div class="display"></div>
+                <input type="range" autocomplete="off" min="8" max="64" id="slider" value="16">
+            </div>
         </div>
+        <div class="grid"></div>
     </div>
-    <div class="grid"></div>
-    <footer>Made by: <a href="https://github.com/ri5hi-kumar"></a>Rishi Kumar</footer>
+    <footer>Copyright © 2022 <a href="https://github.com/ri5hi-kumar" target="_blank">Rishi Kumar</a></footer>
 </body>
 </html>
